@@ -1,3 +1,5 @@
+package labs;
+
 import java.util.Scanner;
 import java.util.function.Predicate;
 import java.util.function.Function;
@@ -11,7 +13,7 @@ interface DoctorEvaluator{
     public boolean evaluate(Doctor doctor);
 }
 
-// TODO: Create a HighExpertiseEvaluator class that will implement the functional interface and override the evaluate method
+// TODO: Create a labs.HighExpertiseEvaluator class that will implement the functional interface and override the evaluate method
 
 class HighExpertiseEvaluator implements DoctorEvaluator{
 

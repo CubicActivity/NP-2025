@@ -1,3 +1,5 @@
+package labs;
+
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -108,7 +110,7 @@ class MovableObjectNotFittableException extends RuntimeException {
     }
     public void print() {
         if(m instanceof MovableCircle){
-            System.out.println("Movable circle with center ("+((MovableCircle) m).centerPoint.x + ","+((MovableCircle) m).centerPoint.y+") and radius "+((MovableCircle) m).radius+" can not be fitted into the collection");
+            System.out.println("labs.Movable circle with center ("+((MovableCircle) m).centerPoint.x + ","+((MovableCircle) m).centerPoint.y+") and radius "+((MovableCircle) m).radius+" can not be fitted into the collection");
         }
 
     }
@@ -199,7 +201,7 @@ class MovablePoint implements Movable{
 
     @Override
     public String toString() {
-        return "Movable point with coordinates (" + x +"," + y +")";
+        return "labs.Movable point with coordinates (" + x +"," + y +")";
     }
 }
 
@@ -271,7 +273,7 @@ class MovableCircle implements Movable{
 
     @Override
     public String toString() {
-        return "Movable circle with center coordinates ("+this.centerPoint.x+","+this.centerPoint.y +") and radius " + radius;
+        return "labs.Movable circle with center coordinates ("+this.centerPoint.x+","+this.centerPoint.y +") and radius " + radius;
     }
 }
 
