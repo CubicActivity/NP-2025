@@ -1,4 +1,4 @@
-package auditoriski.aud1;
+package auditoriski.aud1_abstract_class_interfaces;
 
 abstract class Alien {
     public static final int SNAKE_ALIEN = 0;

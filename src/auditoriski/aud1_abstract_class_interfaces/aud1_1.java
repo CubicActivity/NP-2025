@@ -1,4 +1,4 @@
-package auditoriski.aud1;
+package auditoriski.aud1_abstract_class_interfaces;
 import java.util.ArrayList;
 
 abstract class Account {
