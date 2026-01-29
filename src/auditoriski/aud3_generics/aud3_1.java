@@ -1,8 +1,8 @@
 package auditoriski.aud3_generics;
-
-
 import java.util.ArrayList;
 import java.util.Random;
+
+// Basic Generic
 
 class Box<T> {
     private ArrayList<T> items;
