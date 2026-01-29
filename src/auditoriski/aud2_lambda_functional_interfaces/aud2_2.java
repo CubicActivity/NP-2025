@@ -13,7 +13,7 @@ class OperationFactory {
     private static final char MULTIPLY = '*';
     private static final char DIVIDE = '/';
 
-    // Define static lambda operations
+    // Define static lambda function operations
     private static final Operation ADD = (r, v) -> r+v;
     private static final Operation SUBTRACT = (r,v) -> r-v;
     private static final Operation MULTIPLY_OP = (r, v) -> r*v;

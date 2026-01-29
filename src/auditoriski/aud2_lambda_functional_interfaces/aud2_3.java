@@ -4,6 +4,8 @@ import java.util.function.*;
 
 public class aud2_3 {
 
+    // Functional Interfaces
+
     public static void main(String[] args){
         // Function to get the length of a string
         Function<String, Integer> stringLength = str -> str.length();
