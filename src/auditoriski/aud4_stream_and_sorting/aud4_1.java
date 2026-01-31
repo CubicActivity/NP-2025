@@ -38,20 +38,20 @@ class Book{
 
 
 class BookCollection{
-    ArrayList<Book> books;
+    ArrayList<auditoriski.primer.Book> books;
 
     public BookCollection() {
         this.books = new ArrayList<>();
     }
 
-    public void addBook(Book book){
+    public void addBook(auditoriski.primer.Book book){
         books.add(book);
     }
 
     public void printByCategory(String category){
         String cat = category.toLowerCase();
         System.out.println("Collection for category "+category+":");
-        books.stream().sorted(Comparator.comparing(Book::getTitle).thenComparing(Book::getPrice)).forEach(book -> {
+        books.stream().sorted(Comparator.comparing(auditoriski.primer.Book::getTitle).thenComparing(auditoriski.primer.Book::getPrice)).forEach(book -> {
             if(book.getCategory().toLowerCase().equals(cat)) System.out.print(book);
         });
         System.out.println();
@@ -60,7 +60,7 @@ class BookCollection{
     public List getCheapestN(int N){
         List result = new ArrayList();
         System.out.println("Cheapest "+N+" books in collection:");
-        books.stream().sorted(Comparator.comparing(Book::getPrice)).limit(N).forEach(book -> {result.add(book);});
+        books.stream().sorted(Comparator.comparing(auditoriski.primer.Book::getPrice)).limit(N).forEach(book -> {result.add(book);});
         return result;
     }
 }
@@ -68,13 +68,13 @@ class BookCollection{
 
 public class aud4_1 {
     public static void main(String[] args){
-        Book book1 = new Book("Art of war", "Strategy", 20);
-        Book book2 = new Book("Star wars vol1", "Sci-fi", 30);
-        Book book3 = new Book("Star wars vol2", "Sci-fi", 25);
-        Book book4 = new Book("ABC", "Sci-fi", 35);
+        auditoriski.primer.Book book1 = new auditoriski.primer.Book("Art of war", "Strategy", 20);
+        auditoriski.primer.Book book2 = new auditoriski.primer.Book("Star wars vol1", "Sci-fi", 30);
+        auditoriski.primer.Book book3 = new auditoriski.primer.Book("Star wars vol2", "Sci-fi", 25);
+        auditoriski.primer.Book book4 = new auditoriski.primer.Book("ABC", "Sci-fi", 35);
 
 
-        BookCollection collection = new BookCollection();
+        auditoriski.primer.BookCollection collection = new auditoriski.primer.BookCollection();
         collection.addBook(book1);
         collection.addBook(book2);
         collection.addBook(book3);
