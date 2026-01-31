@@ -48,6 +48,13 @@ class Book implements Comparable{
 
     @Override
     public int compareTo(Object o) {
+        try {
+            if (o.getClass() != getClass()) {
+                throw new ClassCastException();
+            }
+        }catch (ClassCastException e){
+            e.printStackTrace();
+        }
         return Integer.compare(hashCode(), o.hashCode());
     }
 }
