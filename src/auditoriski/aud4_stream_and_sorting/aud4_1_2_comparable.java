@@ -4,8 +4,9 @@ package auditoriski.aud4_stream_and_sorting;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Objects;
 
-class Book{
+class Book implements Comparable{
     private String title;
     private String category;
     private float price;
@@ -33,6 +34,22 @@ class Book{
         return title + " ("+ category+ ") "+price +'\n';
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Book book = (Book) o;
+        return Float.compare(price, book.price) == 0 && Objects.equals(category, book.category);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(category, price);
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        return Integer.compare(hashCode(), o.hashCode());
+    }
 }
 
 
@@ -66,7 +83,7 @@ class BookCollection{
 }
 
 
-public class aud4_1 {
+public class aud4_1_2_comparable {
     public static void main(String[] args){
         Book book1 = new Book("Art of war", "Strategy", 20);
         Book book2 = new Book("Star wars vol1", "Sci-fi", 30);
